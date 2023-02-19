@@ -58,3 +58,19 @@ Hello
     </button>
   </div>
 </div>
+
+<div>
+  <div class="main"> 
+    <div class="output">{{ output }}</div>
+    <div id="numberDiv">
+      <button
+        class="buttonC"
+        *ngFor="let number of [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, ',']"
+        (click)="add(number)"
+      >
+        {{ number }}
+      </button>
+      <button fxShow.lt-xs fxHide.gt-xs class="button" (click)="calc()">=</button>
+    </div>
+  </div>
+</div>
