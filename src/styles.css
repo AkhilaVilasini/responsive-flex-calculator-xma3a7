@@ -1,0 +1,39 @@
+  #calc{
+padding: 0;
+  margin: 0;
+}
+ .button{
+ width: 50px;
+ height: 50px;
+ padding: 0;
+border: none;
+background: none;
+}
+.scientificButton{
+  padding: 0;
+border: none;
+background: none;
+width: 50px;
+  height: 50px;
+  color:white;
+}
+.button:hover{
+  border: 2px solid darkblue;
+}
+.scientificButton:hover{
+  border: 2px solid white;
+}
+#operations{ 
+  width:100px;
+}
+#numberDiv{
+  width:150px;
+}
+#output{
+  height:80px;
+  border-bottom: 2px solid black;
+}
+#scientific{
+  background-color: rgb(8, 107, 255);
+  width:150px;
+}

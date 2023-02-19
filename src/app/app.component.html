@@ -1,0 +1,60 @@
+Hello
+<div id="output">{{ output }}</div>
+<div id="calc" fxLayout="row" fxLayoutAlign="center stretch">
+  <div id="numberDiv">
+    <button
+      class="button"
+      *ngFor="let number of [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, ',']"
+      (click)="add(number)"
+    >
+      {{ number }}
+    </button>
+    <button fxShow.lt-xs fxHide.gt-xs class="button" (click)="calc()">=</button>
+  </div>
+  <div id="operations">
+    <button
+      class="button"
+      *ngFor="let operation of ['/', '<-', '*', '', '-', '', '+']"
+      (click)="addOperation(operation)"
+    >
+      {{ operation }}
+    </button>
+    <button fxHide.xs class="button" (click)="calc()">=</button>
+  </div>
+  <div id="operations" fxLayout="column" fxShow.lt-xs fxHide.gt-xs>
+    <button
+      class="button"
+      *ngFor="let operation of ['<-', '/', '*', '-', '+']"
+      (click)="addOperation(operation)"
+    >
+      {{ operation }}
+    </button>
+  </div>
+  <div id="scientific" fxHide.xs>
+    <button
+      class="operation, scientificButton"
+      *ngFor="
+        let operation of [
+          'INV',
+          'GRAD',
+          '%',
+          'sin',
+          'cos',
+          'tan',
+          'ln',
+          'log',
+          'W',
+          'pi',
+          'e',
+          '^',
+          '(',
+          ')',
+          '!'
+        ]
+      "
+      (click)="specialEvent(operation)"
+    >
+      {{ operation }}
+    </button>
+  </div>
+</div>
